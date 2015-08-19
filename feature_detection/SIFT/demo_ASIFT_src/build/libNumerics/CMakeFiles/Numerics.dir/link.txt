@@ -1,0 +1,2 @@
+/usr/bin/ar cr libNumerics.a  CMakeFiles/Numerics.dir/computeH.cpp.o CMakeFiles/Numerics.dir/homography.cpp.o CMakeFiles/Numerics.dir/matrix.cpp.o CMakeFiles/Numerics.dir/numerics.cpp.o CMakeFiles/Numerics.dir/rodrigues.cpp.o CMakeFiles/Numerics.dir/vector.cpp.o
+/usr/bin/ranlib libNumerics.a

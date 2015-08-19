@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/evan/UAV_Photogrammetry_toolkit/image_enhancement/ACE/opencv_wrapper/src/main.cpp
+iostream
+-
+algorithm
+-
+cstdlib
+-
+iomanip
+-
+cmath
+-
+vector
+-
+queue
+-
+limits
+-
+string
+-
+opencv2/core.hpp
+-
+opencv2/highgui.hpp
+-
+

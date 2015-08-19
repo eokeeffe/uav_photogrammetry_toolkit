@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/evan/FeatureDescriptors/demo_ASIFT_src/libMatch/match.cpp
+match.h
+/home/evan/FeatureDescriptors/demo_ASIFT_src/libMatch/match.h
+fstream
+-
+sstream
+-
+
+/home/evan/FeatureDescriptors/demo_ASIFT_src/libMatch/match.h
+vector
+-
+

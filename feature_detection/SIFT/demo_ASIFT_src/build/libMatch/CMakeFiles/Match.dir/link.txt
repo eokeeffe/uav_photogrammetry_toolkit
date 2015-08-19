@@ -1,0 +1,2 @@
+/usr/bin/ar cr libMatch.a  CMakeFiles/Match.dir/match.cpp.o
+/usr/bin/ranlib libMatch.a

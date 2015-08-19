@@ -1,0 +1,5 @@
+/home/evan/FeatureDescriptors/demo_ASIFT_src/build/libMatch/CMakeFiles/Match.dir
+/home/evan/FeatureDescriptors/demo_ASIFT_src/build/libNumerics/CMakeFiles/Numerics.dir
+/home/evan/FeatureDescriptors/demo_ASIFT_src/build/CMakeFiles/demo_ASIFT.dir
+/home/evan/FeatureDescriptors/demo_ASIFT_src/build/io_png/libs/png/CMakeFiles/png.dir
+/home/evan/FeatureDescriptors/demo_ASIFT_src/build/io_png/libs/zlib/CMakeFiles/zlib.dir
