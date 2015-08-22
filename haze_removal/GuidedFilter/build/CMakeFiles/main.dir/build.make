@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter
+CMAKE_SOURCE_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build
+CMAKE_BINARY_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/main.cpp
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
 
 CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
 CMakeFiles/main.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/main.cpp.o.requires
@@ -75,14 +75,39 @@ CMakeFiles/main.dir/src/main.cpp.o.provides: CMakeFiles/main.dir/src/main.cpp.o.
 
 CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.cpp.o
 
+CMakeFiles/main.dir/src/guided_dehazing.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/guided_dehazing.cpp.o: ../src/guided_dehazing.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/guided_dehazing.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/guided_dehazing.cpp.o -c /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/guided_dehazing.cpp
+
+CMakeFiles/main.dir/src/guided_dehazing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/guided_dehazing.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/guided_dehazing.cpp > CMakeFiles/main.dir/src/guided_dehazing.cpp.i
+
+CMakeFiles/main.dir/src/guided_dehazing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/guided_dehazing.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/guided_dehazing.cpp -o CMakeFiles/main.dir/src/guided_dehazing.cpp.s
+
+CMakeFiles/main.dir/src/guided_dehazing.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/src/guided_dehazing.cpp.o.requires
+
+CMakeFiles/main.dir/src/guided_dehazing.cpp.o.provides: CMakeFiles/main.dir/src/guided_dehazing.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/guided_dehazing.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/guided_dehazing.cpp.o.provides
+
+CMakeFiles/main.dir/src/guided_dehazing.cpp.o.provides.build: CMakeFiles/main.dir/src/guided_dehazing.cpp.o
+
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/main.cpp.o"
+"CMakeFiles/main.dir/src/main.cpp.o" \
+"CMakeFiles/main.dir/src/guided_dehazing.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/main.cpp.o
+main: CMakeFiles/main.dir/src/guided_dehazing.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/local/lib/libopencv_xphoto.so.3.0.0
 main: /usr/local/lib/libopencv_xobjdetect.so.3.0.0
@@ -171,6 +196,7 @@ CMakeFiles/main.dir/build: main
 .PHONY : CMakeFiles/main.dir/build
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/guided_dehazing.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:
@@ -178,6 +204,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

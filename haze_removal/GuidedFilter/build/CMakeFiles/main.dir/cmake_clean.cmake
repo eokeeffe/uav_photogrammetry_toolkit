@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/main.cpp.o"
+  "CMakeFiles/main.dir/src/guided_dehazing.cpp.o"
   "main.pdb"
   "main"
 )

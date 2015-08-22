@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter
+CMAKE_SOURCE_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build
+CMAKE_BINARY_DIR = /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build/CMakeFiles /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -114,25 +114,12 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-#=============================================================================
-# Target rules for targets named main2
-
-# Build rule for target.
-main2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main2
-.PHONY : main2
-
-# fast build rule for target.
-main2/fast:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/build
-.PHONY : main2/fast
-
 src/guided_dehazing.o: src/guided_dehazing.cpp.o
 .PHONY : src/guided_dehazing.o
 
 # target to build an object file
 src/guided_dehazing.cpp.o:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/src/guided_dehazing.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/guided_dehazing.cpp.o
 .PHONY : src/guided_dehazing.cpp.o
 
 src/guided_dehazing.i: src/guided_dehazing.cpp.i
@@ -140,7 +127,7 @@ src/guided_dehazing.i: src/guided_dehazing.cpp.i
 
 # target to preprocess a source file
 src/guided_dehazing.cpp.i:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/src/guided_dehazing.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/guided_dehazing.cpp.i
 .PHONY : src/guided_dehazing.cpp.i
 
 src/guided_dehazing.s: src/guided_dehazing.cpp.s
@@ -148,7 +135,7 @@ src/guided_dehazing.s: src/guided_dehazing.cpp.s
 
 # target to generate assembly for a file
 src/guided_dehazing.cpp.s:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/src/guided_dehazing.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/guided_dehazing.cpp.s
 .PHONY : src/guided_dehazing.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -175,30 +162,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/main2.o: src/main2.cpp.o
-.PHONY : src/main2.o
-
-# target to build an object file
-src/main2.cpp.o:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/src/main2.cpp.o
-.PHONY : src/main2.cpp.o
-
-src/main2.i: src/main2.cpp.i
-.PHONY : src/main2.i
-
-# target to preprocess a source file
-src/main2.cpp.i:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/src/main2.cpp.i
-.PHONY : src/main2.cpp.i
-
-src/main2.s: src/main2.cpp.s
-.PHONY : src/main2.s
-
-# target to generate assembly for a file
-src/main2.cpp.s:
-	$(MAKE) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/src/main2.cpp.s
-.PHONY : src/main2.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -207,7 +170,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... main2"
 	@echo "... rebuild_cache"
 	@echo "... src/guided_dehazing.o"
 	@echo "... src/guided_dehazing.i"
@@ -215,9 +177,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/main2.o"
-	@echo "... src/main2.i"
-	@echo "... src/main2.s"
 .PHONY : help
 
 

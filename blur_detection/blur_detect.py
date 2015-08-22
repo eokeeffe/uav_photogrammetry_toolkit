@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import numpy as np
 import cv2
 from math import sqrt
@@ -40,11 +39,11 @@ def normalizedGrayLevelVariance(src):
     mu,sigma = cv2.meanStdDev(src)
     focusMeasure = (sigma[0]*sigma[0]/mu[0])
     return focusMeasure[0]
-#Get the highest absolute value from the Laplace filter 
+#Get the highest absolute value from the Laplace filter
 def absMaxBlur(img,ksize=3):
     grey = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     return np.max(cv2.convertScaleAbs(cv2.Laplacian(grey,ksize)))
-#look for the threshold Higher spectrum point, blur 
+#look for the threshold Higher spectrum point, blur
 #means there will be less of them
 def fft_blur_detection(img,upper_thresh,lower_thresh):
     if len(img.shape)>2:

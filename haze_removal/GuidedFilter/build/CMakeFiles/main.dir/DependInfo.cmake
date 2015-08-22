@@ -4,7 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/src/main.cpp" "/home/evan/UAV_Photogrammetry_toolkit/haze_detection/GuidedFilter/build/CMakeFiles/main.dir/src/main.cpp.o"
+  "/home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/guided_dehazing.cpp" "/home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles/main.dir/src/guided_dehazing.cpp.o"
+  "/home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/src/main.cpp" "/home/evan/UAV_Photogrammetry_toolkit/haze_removal/GuidedFilter/build/CMakeFiles/main.dir/src/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
