@@ -1,0 +1,11 @@
+#ignore build folders in c++ code directories
+build/
+#ignore any images
+*.JPG
+*.jpg
+*.JPEG
+*.jpeg
+*.PNG
+*.png
+*.TIFF
+*.tiff

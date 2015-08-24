@@ -1,0 +1,32 @@
+Make:Parrot
+Model:ARDrone2.0
+ApertureValue:0
+ExposureTime:0
+ExposureBiasValue:0 EV
+ISOSpeedRatings:50
+FocalLength:0
+FNumber:0
+Orientation:0
+Flash:0
+MeteringMode:0
+ShutterSpeedValue:0
+Accelerometer[X,Y,Z]:0,0,0
+Gyro[X,Y,Z]:0,0,0
+Compass:180.0
+FOV:90 degree angle lens
+FPS:30
+Software:UAV Photogrammetry Package created by eokeeffe
+ColorSpace:RGB
+ExposureMode:
+GPSAltitude:0
+GPSAltitudeRef:0
+GPSDateStamp:2015:06:06
+GPSInfo:11916
+GPSLatitude:
+GPSLatitudeRef:N
+GPSLongitude:
+GPSLongitudeRef:E
+GPSMapDatum: WGS-84
+GPSStatus:A
+GPSTimeStamp:
+GPSVersionID:2,2,0,0
