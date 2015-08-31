@@ -1,6 +1,5 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/main.cpp.o"
-  "CMakeFiles/main.dir/src/sift.cpp.o"
   "CMakeFiles/main.dir/src/write_sift.cpp.o"
   "CMakeFiles/main.dir/src/write_mat.cpp.o"
   "main.pdb"

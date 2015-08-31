@@ -1,5 +1,5 @@
 #!/bin/python
-import os,sys
+import os,sys,subprocess
 import ConfigParser
 from blur_detection.blur_detect import *
 from blur_detection.auto_canny import *
@@ -40,6 +40,7 @@ def detect_haze(config):
 
 def preform_stabilization(config):
     #stabilize
+    
     return
 
 def preform_dehazing(config):

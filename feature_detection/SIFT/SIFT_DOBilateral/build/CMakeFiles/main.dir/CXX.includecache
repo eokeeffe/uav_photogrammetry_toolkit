@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+../include/parser.h
+iostream
+-
+string
+-
+
+../include/sift.h
+opencv2/core/core.hpp
+-
+opencv2/features2d.hpp
+-
+opencv2/xfeatures2d.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+
 ../include/write_mat.h
 opencv2/core/core.hpp
 -
@@ -26,15 +42,31 @@ opencv2/imgproc/imgproc.hpp
 opencv2/features2d/features2d.hpp
 -
 
-/home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_mat.cpp
+/home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/main.cpp
 iostream
 -
-fstream
+cstdio
+-
+ctime
+-
+vector
 -
 string
 -
-write_mat.h
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/imgproc/imgproc.hpp
+-
+opencv2/features2d/features2d.hpp
+-
+sift.h
 -
 write_sift.h
+-
+write_mat.h
+-
+parser.h
 -
 

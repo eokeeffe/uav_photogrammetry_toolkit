@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral
+CMAKE_SOURCE_DIR = /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build
+CMAKE_BINARY_DIR = /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/main.cpp
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
 
 CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
 CMakeFiles/main.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/main.cpp.o.requires
@@ -75,42 +75,19 @@ CMakeFiles/main.dir/src/main.cpp.o.provides: CMakeFiles/main.dir/src/main.cpp.o.
 
 CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.cpp.o
 
-CMakeFiles/main.dir/src/sift.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/sift.cpp.o: ../src/sift.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/sift.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/sift.cpp.o -c /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/sift.cpp
-
-CMakeFiles/main.dir/src/sift.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/sift.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/sift.cpp > CMakeFiles/main.dir/src/sift.cpp.i
-
-CMakeFiles/main.dir/src/sift.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/sift.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/sift.cpp -o CMakeFiles/main.dir/src/sift.cpp.s
-
-CMakeFiles/main.dir/src/sift.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/src/sift.cpp.o.requires
-
-CMakeFiles/main.dir/src/sift.cpp.o.provides: CMakeFiles/main.dir/src/sift.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sift.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/src/sift.cpp.o.provides
-
-CMakeFiles/main.dir/src/sift.cpp.o.provides.build: CMakeFiles/main.dir/src/sift.cpp.o
-
 CMakeFiles/main.dir/src/write_sift.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/write_sift.cpp.o: ../src/write_sift.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/write_sift.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/write_sift.cpp.o -c /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_sift.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/write_sift.cpp.o -c /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_sift.cpp
 
 CMakeFiles/main.dir/src/write_sift.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/write_sift.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_sift.cpp > CMakeFiles/main.dir/src/write_sift.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_sift.cpp > CMakeFiles/main.dir/src/write_sift.cpp.i
 
 CMakeFiles/main.dir/src/write_sift.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/write_sift.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_sift.cpp -o CMakeFiles/main.dir/src/write_sift.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_sift.cpp -o CMakeFiles/main.dir/src/write_sift.cpp.s
 
 CMakeFiles/main.dir/src/write_sift.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/write_sift.cpp.o.requires
@@ -123,17 +100,17 @@ CMakeFiles/main.dir/src/write_sift.cpp.o.provides.build: CMakeFiles/main.dir/src
 
 CMakeFiles/main.dir/src/write_mat.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/write_mat.cpp.o: ../src/write_mat.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/src/write_mat.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/write_mat.cpp.o -c /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_mat.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/write_mat.cpp.o -c /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_mat.cpp
 
 CMakeFiles/main.dir/src/write_mat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/write_mat.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_mat.cpp > CMakeFiles/main.dir/src/write_mat.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_mat.cpp > CMakeFiles/main.dir/src/write_mat.cpp.i
 
 CMakeFiles/main.dir/src/write_mat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/write_mat.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_mat.cpp -o CMakeFiles/main.dir/src/write_mat.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_mat.cpp -o CMakeFiles/main.dir/src/write_mat.cpp.s
 
 CMakeFiles/main.dir/src/write_mat.cpp.o.requires:
 .PHONY : CMakeFiles/main.dir/src/write_mat.cpp.o.requires
@@ -147,7 +124,6 @@ CMakeFiles/main.dir/src/write_mat.cpp.o.provides.build: CMakeFiles/main.dir/src/
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/src/main.cpp.o" \
-"CMakeFiles/main.dir/src/sift.cpp.o" \
 "CMakeFiles/main.dir/src/write_sift.cpp.o" \
 "CMakeFiles/main.dir/src/write_mat.cpp.o"
 
@@ -155,7 +131,6 @@ main_OBJECTS = \
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/main.cpp.o
-main: CMakeFiles/main.dir/src/sift.cpp.o
 main: CMakeFiles/main.dir/src/write_sift.cpp.o
 main: CMakeFiles/main.dir/src/write_mat.cpp.o
 main: CMakeFiles/main.dir/build.make
@@ -246,7 +221,6 @@ CMakeFiles/main.dir/build: main
 .PHONY : CMakeFiles/main.dir/build
 
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/sift.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/write_sift.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/write_mat.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
@@ -256,6 +230,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

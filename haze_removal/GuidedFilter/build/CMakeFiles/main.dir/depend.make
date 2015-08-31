@@ -3,5 +3,6 @@
 
 CMakeFiles/main.dir/src/guided_dehazing.cpp.o: ../src/guided_dehazing.cpp
 
+CMakeFiles/main.dir/src/main.cpp.o: ../include/guided_dehazing.hpp
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
 

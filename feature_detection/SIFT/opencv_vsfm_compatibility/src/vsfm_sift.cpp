@@ -38,7 +38,7 @@ void write_sift_ascii(char *filename,std::vector<cv::KeyPoint>& keypoints,cv::Ma
 
     int name = ('S' + ('I'<<8) + ('F'<<16) + ('T'<<24));
     int version = ('V' + ('4'<<8) + ('.'<<16)+ ('0'<<24));//Without color
-    //int version = ('V' + ('5'<<8) + ('.'<<16)+ ('0'<<24));//With coloer
+    //int version = ('V' + ('5'<<8) + ('.'<<16)+ ('0'<<24));//With color
     int npoint = keypoints.size();
 
     int header[5] = {name, version, npoint, 5, 128};

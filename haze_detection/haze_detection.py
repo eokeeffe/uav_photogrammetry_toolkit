@@ -76,6 +76,7 @@ def processVideoThreaded(video,rho,threshold):
 if __name__=='__main__':
     global data_type
     video = sys.argv[1]
+    #image = cv2.imread(sys.argv[1])
     rho = int(sys.argv[2])
     threshold = int(sys.argv[2])
     #semi_inverse = semi_inverse_image(image.copy())

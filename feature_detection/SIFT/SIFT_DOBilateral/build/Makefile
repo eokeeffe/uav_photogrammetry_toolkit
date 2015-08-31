@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral
+CMAKE_SOURCE_DIR = /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build
+CMAKE_BINARY_DIR = /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -138,30 +138,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/sift.o: src/sift.cpp.o
-.PHONY : src/sift.o
-
-# target to build an object file
-src/sift.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sift.cpp.o
-.PHONY : src/sift.cpp.o
-
-src/sift.i: src/sift.cpp.i
-.PHONY : src/sift.i
-
-# target to preprocess a source file
-src/sift.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sift.cpp.i
-.PHONY : src/sift.cpp.i
-
-src/sift.s: src/sift.cpp.s
-.PHONY : src/sift.s
-
-# target to generate assembly for a file
-src/sift.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sift.cpp.s
-.PHONY : src/sift.cpp.s
-
 src/write_mat.o: src/write_mat.cpp.o
 .PHONY : src/write_mat.o
 
@@ -222,9 +198,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/sift.o"
-	@echo "... src/sift.i"
-	@echo "... src/sift.s"
 	@echo "... src/write_mat.o"
 	@echo "... src/write_mat.i"
 	@echo "... src/write_mat.s"

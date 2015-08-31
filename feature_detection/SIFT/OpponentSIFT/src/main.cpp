@@ -23,10 +23,10 @@
 using namespace cv;
 using namespace cv::xfeatures2d;
 
-
+#define DEBUG
 
 void apply_OpponentSIFT(cv::Mat& img,
-    std::vector<cv::KeyPoint> keypoints,
+    std::vector<cv::KeyPoint>& keypoints,
     cv::Mat& mask,cv::Mat& desc,
     struct SIFTDetector sift)
 {
@@ -38,12 +38,12 @@ void apply_OpponentSIFT(cv::Mat& img,
     o1 = channel[2]-channel[1]/sqrt(2.);
     o2 = channel[2]+channel[1]-2*channel[0]/sqrt(6.);
     o3 = channel[2]+channel[1]+channel[0]/sqrt(3.);
-    
+
     //salient colour boosting
     o1 = o1/(o1+o2+o3)*0.850;
     o2 = o2/(o1+o2+o3)*0.524;
     o3 = o3/(o1+o2+o3)*0.065;
-    
+
     #ifdef DEBUG
     imwrite("o1.jpg", o1);
     imwrite("o2.jpg", o2);
@@ -53,8 +53,8 @@ void apply_OpponentSIFT(cv::Mat& img,
     // Opponent-SIFT Apply SIFT to each opponent channel
     // Works pretty well
     sift(o1,mask,keypoints,desc);
-    sift(o2,mask,keypoints,desc);
-    sift(o3,mask,keypoints,desc);
+    sift(o2,mask,keypoints,desc,true);
+    sift(o3,mask,keypoints,desc,true);
 }
 
 bool has_suffix(const std::string& s, const std::string& suffix)
@@ -143,7 +143,8 @@ void work_directory(char *argv,std::vector<std::string> filenames)
 
         apply_OpponentSIFT(img,keypoints,mask,desc,sift);
 
-        write_sift_binary(const_cast<char*>(filenames.at(i).c_str()),keypoints,desc);
+        //write_sift_binary(const_cast<char*>(filenames.at(i).c_str()),keypoints,desc);
+        write_sift_ascii(const_cast<char*>(filenames.at(i).c_str()),keypoints,desc);
         file_descs[filenames.at(i)] = desc;
 
         imwrite(SplitFilename(filenames.at(i)), img);

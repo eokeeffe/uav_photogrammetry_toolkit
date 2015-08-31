@@ -1,1 +1,1 @@
-/home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/CMakeFiles/main.dir
+/home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/CMakeFiles/main.dir

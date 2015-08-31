@@ -6,14 +6,11 @@ CMakeFiles/main.dir/src/main.cpp.o
  ../include/sift.h
  ../include/write_mat.h
  ../include/write_sift.h
- /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/main.cpp
-CMakeFiles/main.dir/src/sift.cpp.o
- ../include/fast_bilateral_filter.hpp
- /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/sift.cpp
+ /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/main.cpp
 CMakeFiles/main.dir/src/write_mat.cpp.o
  ../include/write_mat.h
  ../include/write_sift.h
- /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_mat.cpp
+ /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_mat.cpp
 CMakeFiles/main.dir/src/write_sift.cpp.o
  ../include/write_sift.h
- /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/src/write_sift.cpp
+ /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/src/write_sift.cpp

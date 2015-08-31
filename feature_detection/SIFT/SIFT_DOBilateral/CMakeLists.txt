@@ -17,11 +17,11 @@ include_directories(
 #set(CMAKE_C_FLAGS_RELEASE "-O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -MMD -MP")
 #set(CMAKE_C_FLAGS_DEBUG "-O0 -g3 -Wall -c -fmessage-length=0 -std=c++0x -MMD -MP")
 
-add_definitions(-DVERBOSE)
+#add_definitions(-DVERBOSE)
 
 add_executable(main
     src/main.cpp
-    src/sift.cpp
+    #src/sift.cpp
     src/write_sift.cpp
     src/write_mat.cpp
 )

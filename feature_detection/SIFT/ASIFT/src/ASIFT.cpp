@@ -67,7 +67,7 @@ void ASiftDetector::detectAndCompute(const Mat& img, std::vector< cv::KeyPoint >
             //timg = img;
             affineSkew(t, phi, timg, mask, Ai);
 
-            SIFTDetector sift;
+            SIFTDetector sift(3000,8,0.04,10,1.6);
             sift(timg, mask, kps, desc);
 
             #pragma omp parrallel for shared(kps,Ai)

@@ -104,7 +104,8 @@
 
 #include <iostream>
 #include <stdarg.h>
-#include <fast_bilateral_filter.hpp>
+//#include <fast_bilateral_filter.hpp>
+#include <opencv2/photo.hpp>
 #include <opencv2/xfeatures2d.hpp>
 
 namespace cv
@@ -160,7 +161,7 @@ protected:
 Ptr<SIFT> SIFT::create( int _nfeatures, int _nOctaveLayers,
                      double _contrastThreshold, double _edgeThreshold, double _sigma)
 {
-    std::cerr<<"Using DOB"<<std::endl;
+    //std::cerr<<"Using DOB"<<std::endl;
     return makePtr<SIFT_ImplB>(_nfeatures, _nOctaveLayers, _contrastThreshold, _edgeThreshold, _sigma);
 }
 
@@ -202,7 +203,8 @@ static const float SIFT_DESCR_MAG_THR = 0.2f;
 // factor used to convert floating-point descriptor to unsigned char
 static const float SIFT_INT_DESCR_FCTR = 512.f;
 
-static const float BILATERAL_SIGMA_COLOUR = 60;
+static const float BILATERAL_SIGMA_S = 60;
+static float BILATERAL_SIGMA_R = 0.4;
 
 
 #if 0
@@ -241,14 +243,16 @@ static Mat createInitialImage( const Mat& img, bool doubleImageSize, float sigma
         Mat dbl;
         resize(gray_fpt, dbl, Size(gray.cols*2, gray.rows*2), 0, 0, INTER_LINEAR);
         //GaussianBlur(dbl, dbl, Size(), sig_diff, sig_diff);
-        cv_extend::bilateralFilter(dbl, dbl, BILATERAL_SIGMA_COLOUR, 10);
+        //cv_extend::bilateralFilter(dbl, dbl, BILATERAL_SIGMA_S, 10);
+        edgePreservingFilter(dbl,dbl,2,BILATERAL_SIGMA_S,BILATERAL_SIGMA_R);
         return dbl;
     }
     else
     {
         sig_diff = sqrtf( std::max(sigma * sigma - SIFT_INIT_SIGMA * SIFT_INIT_SIGMA, 0.01f) );
         //GaussianBlur(gray_fpt, gray_fpt, Size(), sig_diff, sig_diff);
-        cv_extend::bilateralFilter(gray_fpt, gray_fpt, BILATERAL_SIGMA_COLOUR, 10);
+        //cv_extend::bilateralFilter(gray_fpt, gray_fpt, BILATERAL_SIGMA_S, BILATERAL_SIGMA_S);
+        edgePreservingFilter(gray_fpt,gray_fpt,2,BILATERAL_SIGMA_S,BILATERAL_SIGMA_R);
         return gray_fpt;
     }
 }
@@ -287,8 +291,9 @@ void SIFT_ImplB::buildBilateralPyramid( const Mat& base, std::vector<Mat>& pyr, 
                 const Mat& src = pyr[o*(nOctaveLayers + 3) + i-1];
                 std::string name="";
                 std::ostringstream convert;// stream used for the conversion
-                cv_extend::bilateralFilter(src, dst, BILATERAL_SIGMA_COLOUR, sig[i]);
+                //cv_extend::bilateralFilter(src, dst, BILATERAL_SIGMA_S, sig[i]);
                 //cv::edgePreservingFilter(src,dst,1,60,sig[i]);
+                edgePreservingFilter(src,dst,2,sig[i],BILATERAL_SIGMA_R);
                 #ifdef VERBOSE
                     convert << "B" << "_" << o << "_" << i << ".jpg";
                     name = convert.str();
@@ -825,6 +830,7 @@ SIFT_ImplB::SIFT_ImplB( int _nfeatures, int _nOctaveLayers,
 
 int SIFT_ImplB::descriptorSize() const
 {
+    //4*4*8
     return SIFT_DESCR_WIDTH*SIFT_DESCR_WIDTH*SIFT_DESCR_HIST_BINS;
 }
 

@@ -9,3 +9,6 @@ build/
 *.png
 *.TIFF
 *.tiff
+#ignore any Videos
+*.mp4
+*.avi

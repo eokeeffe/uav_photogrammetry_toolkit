@@ -1,4 +1,4 @@
-# Install script for directory: /home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral
+# Install script for directory: /home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/evan/FeatureDescriptors/SIFT/SIFT_DOBilateral/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/evan/UAV_Photogrammetry_toolkit/feature_detection/SIFT/SIFT_DOBilateral/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
