@@ -53,7 +53,7 @@ def affine_detect(detector, img, mask=None, pool=None):
 
     ThreadPool object may be passed to speedup the computation.
     '''
-    
+
     params = [(1.0, 0.0)]
     for t in 2**(0.5*np.arange(1,6)):
         for phi in np.arange(0, 180, 72.0 / t):
@@ -94,7 +94,7 @@ def affine_detect2(detector, img, kps=[], mask=None, pool=None):
 
     ThreadPool object may be passed to speedup the computation.
     '''
-    
+
     params = [(1.0, 0.0,kps)]
     for t in 2**(0.5*np.arange(1,6)):
         for phi in np.arange(0, 180, 72.0 / t):
@@ -142,7 +142,7 @@ def convertBGRtoOpponent(channels):
     o2 = o2.astype(np.uint8)
     o3 = o3.astype(np.uint8)
     return o1,o2,o3
-    
+
 
 def boostSalientColours(o1,o2,o3):
     #Convert to float type
@@ -162,20 +162,21 @@ def boostSalientColours(o1,o2,o3):
 def processImage(image):
     img = cv2.imread(image)
     channels = cv2.split(img)
-    
+
     o1,o2,o3 = convertBGRtoOpponent(channels)
     #o1,o2,o3 = boostSalientColours(o1,o2,o3)
-    
-    #cv2.imwrite("o1.jpg",o1)   
+
+    #cv2.imwrite("o1.jpg",o1)
     #cv2.imwrite("o2.jpg",o2)
     #cv2.imwrite("o3.jpg",o3)
-    
+
     detector = cv2.xfeatures2d.SIFT_create(nfeatures=50)
+    #detector = cv2.AKAZE_create()
     pool=ThreadPool(processes = cv2.getNumberOfCPUs())
     keypoints, descriptors = affine_detect(detector, o1, pool=pool)
     kp1, desc1 = affine_detect(detector, o2, pool=pool)
     kp2, desc2 = affine_detect(detector, o3, pool=pool)
-    
+
     keypoints.extend(kp1)
     keypoints.extend(kp2)
     #print descriptors.shape
@@ -183,7 +184,7 @@ def processImage(image):
     #print desc2.shape
     descriptors = np.concatenate((descriptors,desc1))
     descriptors = np.concatenate((descriptors,desc2))
-    
+
     #Apply Hellinger Kernel
     descriptors = hellingerKernel(descriptors)
     return img,keypoints,descriptors
@@ -194,7 +195,7 @@ def addDesc(keypoints,descriptors):
     combined_descriptors = []
     combined_keypoints = []
     i = 0
-    
+
     for keypoint in keypoints:
         x,y = keypoint.pt
         if (x,y) in seen.keys():
@@ -203,17 +204,17 @@ def addDesc(keypoints,descriptors):
             seen[(x,y)]=i
             identicals[(x,y)]=[i]
         i+=1
-    
+
     for key in identicals.keys():
         combined_keypoints.append(keypoints[identicals[key][0]])
         for loc in identicals[key]:
             a=0
-    
+
     #print identicals.values()
     #print len(keypoints)," has ",len(seen.keys())," unique keypoints"
     #new_descriptors = []
     #for keypoint in seen.keys():
-        
+
 def hellingerKernel(descs):
     # apply the Hellinger kernel by first L1-normalizing and taking the
 	# square-root
@@ -221,20 +222,19 @@ def hellingerKernel(descs):
 	descs = np.sqrt(descs)
 	#descs /= (np.linalg.norm(descs, axis=1, ord=2) + eps)
 	return descs
-	
+
 def writeSift(name,keypoints,desc):
     #print "Saving: ",name+".sift"
-    sift = open(name+".sift", 'w')
-    sift.write("SIFT V4.0\n")
-    sift.write(str(len(keypoints))+" ")
-    sift.write(str(5)+" ")
-    sift.write(str(128)+"\n")
+    sift = open(name+".sift", 'wb')
+    rows = str(len(keypoints))
+    cols = str(128)
+    #print rows,cols
+    sift.write(rows+" "+cols+" \n")
     i=0
     for keypoint in keypoints:
-        kpt = "%f %f 1 %f %f\n"%(keypoint.pt[1], keypoint.pt[1],keypoint.size, keypoint.angle)
+        kpt = "%f %f %f %f \n"%(keypoint.pt[0], keypoint.pt[1],keypoint.size, keypoint.angle)
         sift.write(kpt)
-        for d in desc[i]:
-            sift.write("%f "%d)
+        for d in desc[i]: sift.write("%d "%(d))
         sift.write("\n")
         i+=1
     sift.close()
@@ -242,7 +242,7 @@ def writeSift(name,keypoints,desc):
 
 def processDirectory(direct):
     '''
-        
+
     '''
     extensions =["ppm","PPM",
             "pbm","PBM",
@@ -268,7 +268,7 @@ def processDirectory(direct):
     for filen in files:
         full_file =  directory+filen
         filename,ext = os.path.splitext(os.path.basename(filen))
-        ext=ext.replace(".","") 
+        ext=ext.replace(".","")
         if ext in extensions:
             #print "Processing:",full_file
             _,kps,desc = processImage(full_file)
@@ -279,7 +279,7 @@ def processDirectory(direct):
             count+=1
             #write sift features to file
             writeSift(directory+filename,kps,desc)
-            
+
     return
 
 if __name__=='__main__':
@@ -292,7 +292,7 @@ if __name__=='__main__':
     #print "#Kps:",len(kps)
     #print "#Descs:",len(desc)
     #writeSift(image_path,kps,desc)
-    
+
     #img2=img.copy()
     #cv2.drawKeypoints(img,kps,img2)
     #cv2.imshow("points",img2)

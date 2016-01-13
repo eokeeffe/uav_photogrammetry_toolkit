@@ -1,0 +1,20 @@
+#Do the feature matching
+    for key in features.keys():
+        filename,ext = os.path.splitext(os.path.basename(key))
+        matching_file = filename+".mat"
+        f = open(matching_file,"w")
+        keypoints1,descriptors1 = unpickle_keypoints(features[key])
+        for key2 in features.keys():
+            if not key == key2:
+                keypoints2,descriptors2 = unpickle_keypoints(features[key2])
+                #Matches
+                flann_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
+                matcher = cv2.FlannBasedMatcher(flann_params, {})
+                raw_matches = matcher.knnMatch(descriptors1, trainDescriptors = descriptors2, k = 2) #2
+                 #Filter the matches
+                 p1, p2, kp_pairs = filter_matches(keypoints1, keypoints2, raw_matches)      
+                 if len(p1) >= 4:
+                    H, status = cv2.findHomography(p1, p2, cv2.RANSAC, 5.0)
+                    print '%d / %d  inliers/matched' % (np.sum(status), len(status))
+                    # do not draw outliers (there will be a lot of them)
+                    kp_pairs = [kpp for kpp, flag in zip(kp_pairs, status) if flag] 

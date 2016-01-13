@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 from cv2 import imread
 import os,sys
 import subprocess
