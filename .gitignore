@@ -1,5 +1,6 @@
 #ignore build folders in c++ code directories
-build/
+*/build/*
+*/output_dir/*
 #ignore any images
 *.JPG
 *.jpg
